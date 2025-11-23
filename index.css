@@ -6,7 +6,7 @@
   padding: 0;
 }
 body {
-  background-color: #ddd;
+  background-color: #fff;
   font-family: 'Raleway', sans-serif;
   padding: 0 15vw;
 }
@@ -49,7 +49,8 @@ nav a:hover {
 .image-card img {
   margin: 0;
   width: 100%;
-  object-fit:contain;
+  height: 200px;
+  object-fit:cover;
 }
 .image-card a {
   cursor: pointer;
@@ -66,14 +67,14 @@ nav a:hover {
   justify-content: space-between;
   font-size: 0.9em;
 }
-#landscapes, #after-dark {
+#landscapes, #after-dark, #cats {
   display: grid;
   grid-template-columns: repeat(3, 33%);
   grid-gap: 10px;
 }
 
 @media screen and (max-width: 1000px) {
-  #landscapes, #after-dark {
+  #landscapes, #after-dark, #cats {
     grid-template-columns: repeat(2, 50%);
   }
 }
@@ -81,7 +82,7 @@ nav a:hover {
   body {
     padding: 0 5px;
   }
-  #landscapes, #after-dark {
+  #landscapes, #after-dark, #cats {
     grid-template-columns: repeat(1, 100%);
     gap: 5px;
   }
@@ -92,4 +93,9 @@ nav a:hover {
 
 .section-label {
   margin-top: 20px;
+}
+
+footer {
+  margin: 50px 0 20px 0;
+  color: #333333;
 }
