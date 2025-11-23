@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #ddd;
+  font-family: 'Raleway', sans-serif;
+  padding: 0 15vw;
+}
+
+header {
+  display: flex;
+  flex-flow: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 20px 0 0 0;
+}
+header #header-left h1 {
+  margin: 20px 0 0 0;
+  line-height: 0;
+}
+header #header-left h2 {
+  margin: 20px 0 0 20px;
+  font-size: 1em;
+  color: red;
+}
+nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 100%;
+  width: fit-content;
+  font-size: 1em;
+}
+nav a {
+  text-decoration: none;
+  color: #333333;
+}
+nav a:hover {
+  font-weight: bold;
+}
+
+.image-card {
+  padding: 0;
+  margin: 0;
+}
+.image-card img {
+  margin: 0;
+  width: 100%;
+  object-fit:contain;
+}
+.image-card a {
+  cursor: pointer;
+  text-decoration: none;
+}
+.image-card a:hover {
+  font-weight: bold;
+}
+.image-card span {
+  color: #333333;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9em;
+}
+#landscapes, #after-dark {
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  grid-gap: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  #landscapes, #after-dark {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+@media screen and (max-width: 600px) {
+  body {
+    padding: 0 5px;
+  }
+  #landscapes, #after-dark {
+    grid-template-columns: repeat(1, 100%);
+    gap: 5px;
+  }
+  .image-card span p {
+    display: none;
+  }
+}
+
+.section-label {
+  margin-top: 20px;
+}
